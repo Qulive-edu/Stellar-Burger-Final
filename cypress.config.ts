@@ -5,7 +5,10 @@ export default defineConfig({
     baseUrl: "http://localhost:8000",
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      return config;
     },
+    supportFile: 'cypress/support/e2e.ts',
+    specPattern: 'cypress/e2e/**/*.cy.ts'
   },
 
   component: {
